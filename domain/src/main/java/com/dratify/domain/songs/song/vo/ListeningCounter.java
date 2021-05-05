@@ -17,7 +17,7 @@ public record ListeningCounter(long count) {
     }
 
     public ListeningCounter increment() {
-        final long increment =  count + 1;
+        final long increment = count + 1;
         return new ListeningCounter(increment);
     }
 
