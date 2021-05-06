@@ -6,9 +6,9 @@ import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
 
-public record PlaylistCreatedEvent(Instant occurredOn, UUID aggregateId, String name, UserId user, Set<TrackId> songs) implements PlaylistEvent {
+public record PlaylistCreatedEvent(Instant occurredOn, UUID aggregateId, String name, UserId user, Set<UserId> collaborators, Set<TrackId> songs) implements PlaylistEvent {
 
-    public PlaylistCreatedEvent(UUID aggregateId, String name, UserId user, Set<TrackId> songs) {
-        this(Instant.now(), aggregateId, name, user, songs);
+    public PlaylistCreatedEvent(UUID aggregateId, String name, UserId user, Set<UserId> collaborators, Set<TrackId> songs) {
+        this(Instant.now(), aggregateId, name, user, collaborators, songs);
     }
 }
