@@ -1,6 +1,6 @@
-package com.dratify.domain.songs.track.vo;
+package com.dratify.domain.tracks.track.vo;
 
-import com.dratify.domain.songs.track.exception.NegativeCounterException;
+import com.dratify.domain.tracks.track.exception.NegativeCounterException;
 
 public record ListeningCounter(long count) {
 

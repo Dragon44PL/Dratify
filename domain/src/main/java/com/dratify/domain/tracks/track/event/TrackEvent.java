@@ -1,4 +1,4 @@
-package com.dratify.domain.songs.track.event;
+package com.dratify.domain.tracks.track.event;
 
 import domain.events.DomainEvent;
 import java.util.UUID;

@@ -1,10 +1,10 @@
-package com.dratify.domain.songs.track;
+package com.dratify.domain.tracks.track;
 
-import com.dratify.domain.songs.track.event.TrackCreatedEvent;
-import com.dratify.domain.songs.track.event.TrackEvent;
-import com.dratify.domain.songs.track.event.TrackListenedEvent;
-import com.dratify.domain.songs.track.vo.ListeningCounter;
-import com.dratify.domain.songs.track.vo.TrackDataPath;
+import com.dratify.domain.tracks.track.event.TrackCreatedEvent;
+import com.dratify.domain.tracks.track.event.TrackEvent;
+import com.dratify.domain.tracks.track.event.TrackListenedEvent;
+import com.dratify.domain.tracks.track.vo.ListeningCounter;
+import com.dratify.domain.tracks.track.vo.TrackDataPath;
 import domain.AggregateRoot;
 import java.util.ArrayList;
 import java.util.List;

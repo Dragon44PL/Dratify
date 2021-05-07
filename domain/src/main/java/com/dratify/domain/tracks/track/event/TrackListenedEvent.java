@@ -1,6 +1,6 @@
-package com.dratify.domain.songs.track.event;
+package com.dratify.domain.tracks.track.event;
 
-import com.dratify.domain.songs.track.vo.ListeningCounter;
+import com.dratify.domain.tracks.track.vo.ListeningCounter;
 import java.time.Instant;
 import java.util.UUID;
 

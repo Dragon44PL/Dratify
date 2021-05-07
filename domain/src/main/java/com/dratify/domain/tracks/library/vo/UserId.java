@@ -1,4 +1,4 @@
-package com.dratify.domain.songs.library.vo;
+package com.dratify.domain.tracks.library.vo;
 
 import java.util.UUID;
 

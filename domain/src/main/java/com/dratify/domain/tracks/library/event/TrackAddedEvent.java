@@ -1,6 +1,6 @@
-package com.dratify.domain.songs.library.event;
+package com.dratify.domain.tracks.library.event;
 
-import com.dratify.domain.songs.library.vo.TrackId;
+import com.dratify.domain.tracks.library.vo.TrackId;
 
 import java.time.Instant;
 import java.util.UUID;
