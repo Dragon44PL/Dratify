@@ -1,9 +1,6 @@
 package com.dratify.domain.albums.album;
 
-import com.dratify.domain.albums.album.event.AlbumCreatedEvent;
-import com.dratify.domain.albums.album.event.AlbumEvent;
-import com.dratify.domain.albums.album.event.TrackAddedEvent;
-import com.dratify.domain.albums.album.event.TrackRemovedEvent;
+import com.dratify.domain.albums.album.event.*;
 import com.dratify.domain.albums.album.vo.ArtistId;
 import com.dratify.domain.albums.album.vo.TrackId;
 import domain.AggregateRoot;
@@ -17,13 +14,13 @@ class Album extends AggregateRoot<UUID, AlbumEvent> {
     private final Set<TrackId> tracks;
     private final ArtistId artist;
 
-    static Album create(UUID id, String name, Set<TrackId> tracks, ArtistId artist) {
+    static Album create(UUID id, String name, ArtistId artist, Set<TrackId> tracks) {
         final Album album = new Album(id, name, tracks, artist, new ArrayList<>());
         album.registerEvent(new AlbumCreatedEvent(album.id, album.name, album.tracks, album.artist));
         return album;
     }
 
-    static Album restore(UUID id, String name, Set<TrackId> tracks, ArtistId artist) {
+    static Album restore(UUID id, String name, ArtistId artist, Set<TrackId> tracks) {
         return new Album(id, name, tracks, artist, new ArrayList<>());
     }
 
@@ -33,6 +30,18 @@ class Album extends AggregateRoot<UUID, AlbumEvent> {
         this.name = name;
         this.tracks = new HashSet<>(tracks);
         this.artist = artist;
+    }
+
+    void changeAlbumName(String candidate) {
+        if(!sameAlbumName(candidate)) {
+            name = candidate;
+            final AlbumNameChangedEvent albumNameChangedEvent = new AlbumNameChangedEvent(id, name);
+            this.registerEvent(albumNameChangedEvent);
+        }
+    }
+
+    private boolean sameAlbumName(String candidate) {
+        return name.equals(candidate);
     }
 
     void addTrack(TrackId track) {
