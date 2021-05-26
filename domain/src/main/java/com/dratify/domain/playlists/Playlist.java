@@ -4,10 +4,8 @@ import com.dratify.domain.playlists.event.*;
 import com.dratify.domain.playlists.vo.TrackId;
 import com.dratify.domain.playlists.vo.UserId;
 import domain.AggregateRoot;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+
+import java.util.*;
 
 class Playlist extends AggregateRoot<UUID, PlaylistEvent> {
 
@@ -33,8 +31,8 @@ class Playlist extends AggregateRoot<UUID, PlaylistEvent> {
         this.id = id;
         this.name = name;
         this.author = author;
-        this.collaborators = collaborators;
-        this.tracks = tracks;
+        this.collaborators = new HashSet<>(collaborators);
+        this.tracks = new HashSet<>(tracks);
     }
 
     void addCollaborator(UserId collaborator) {
@@ -65,32 +63,32 @@ class Playlist extends AggregateRoot<UUID, PlaylistEvent> {
         return collaborators.contains(collaborator);
     }
 
-    void addTrack(TrackId song) {
-        if(!hasSong(song)) {
-            processAddingTrack(song);
+    void addTrack(TrackId track) {
+        if(!hasTrack(track)) {
+            processAddingTrack(track);
         }
     }
 
-    private void processAddingTrack(TrackId song) {
-        tracks.add(song);
-        final TrackAddedEvent trackAddedEvent = new TrackAddedEvent(id, song);
+    private void processAddingTrack(TrackId track) {
+        tracks.add(track);
+        final TrackAddedEvent trackAddedEvent = new TrackAddedEvent(id, track);
         this.registerEvent(trackAddedEvent);
     }
 
-    void removeTrack(TrackId song) {
-        if(hasSong(song)) {
-            processRemovingTrack(song);
+    void removeTrack(TrackId track) {
+        if(hasTrack(track)) {
+            processRemovingTrack(track);
         }
     }
 
-    private void processRemovingTrack(TrackId song) {
-        tracks.remove(song);
-        final TrackRemovedEvent trackRemovedEvent = new TrackRemovedEvent(id, song);
+    private void processRemovingTrack(TrackId track) {
+        tracks.remove(track);
+        final TrackRemovedEvent trackRemovedEvent = new TrackRemovedEvent(id, track);
         this.registerEvent(trackRemovedEvent);
     }
 
-    boolean hasSong(TrackId song) {
-        return tracks.contains(song);
+    boolean hasTrack(TrackId track) {
+        return tracks.contains(track);
     }
 
 }
