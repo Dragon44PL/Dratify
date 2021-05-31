@@ -12,7 +12,7 @@ public record ListeningCounter(long count) {
         }
     }
 
-    public static ListeningCounter empty() {
+    public static ListeningCounter zero() {
         return new ListeningCounter(MIN_COUNT);
     }
 
@@ -21,7 +21,7 @@ public record ListeningCounter(long count) {
         return new ListeningCounter(increment);
     }
 
-    public static boolean moreThanMinimal(long count) {
+    private static boolean moreThanMinimal(long count) {
         return count >= MIN_COUNT;
     }
 }

@@ -18,7 +18,7 @@ class Track extends AggregateRoot<UUID, TrackEvent> {
     private ListeningCounter listeningCounter;
 
     static Track create(UUID id, String name, TrackDataPath path) {
-        final Track track = new Track(id, name, path, ListeningCounter.empty(), new ArrayList<>());
+        final Track track = new Track(id, name, path, ListeningCounter.zero(), new ArrayList<>());
         track.registerEvent(new TrackCreatedEvent(track.id, track.name, track.trackDataPath, track.listeningCounter));
         return track;
     }
