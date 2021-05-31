@@ -1,6 +1,7 @@
 package com.dratify.domain.tracks.track;
 
 import com.dratify.domain.tracks.track.event.TrackCreatedEvent;
+import com.dratify.domain.tracks.track.event.TrackDataPathChanged;
 import com.dratify.domain.tracks.track.event.TrackEvent;
 import com.dratify.domain.tracks.track.event.TrackListenedEvent;
 import com.dratify.domain.tracks.track.vo.ListeningCounter;
@@ -13,8 +14,8 @@ import java.util.UUID;
 class Track extends AggregateRoot<UUID, TrackEvent> {
 
     private final UUID id;
-    private final TrackDataPath trackDataPath;
     private final String name;
+    private TrackDataPath trackDataPath;
     private ListeningCounter listeningCounter;
 
     static Track create(UUID id, String name, TrackDataPath path) {
@@ -39,6 +40,18 @@ class Track extends AggregateRoot<UUID, TrackEvent> {
         this.listeningCounter = listeningCounter.increment();
         final TrackListenedEvent trackListenedEvent = new TrackListenedEvent(id, listeningCounter);
         registerEvent(trackListenedEvent);
+    }
+
+    void changeTrackDataPath(TrackDataPath candidate) {
+        if(!sameTrackDataPath(candidate)) {
+            this.trackDataPath = candidate;
+            final TrackDataPathChanged trackDataPathChanged = new TrackDataPathChanged(id, this.trackDataPath);
+            this.registerEvent(trackDataPathChanged);
+        }
+    }
+
+    private boolean sameTrackDataPath(TrackDataPath candidate) {
+        return trackDataPath.equals(candidate);
     }
 
 }
