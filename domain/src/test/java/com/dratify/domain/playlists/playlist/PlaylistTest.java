@@ -1,12 +1,10 @@
-package com.dratify.domain.playlists;
+package com.dratify.domain.playlists.playlist;
 
-import com.dratify.domain.playlists.event.*;
-import com.dratify.domain.playlists.vo.TrackId;
-import com.dratify.domain.playlists.vo.UserId;
+import com.dratify.domain.playlists.playlist.event.*;
+import com.dratify.domain.playlists.playlist.vo.TrackId;
+import com.dratify.domain.playlists.playlist.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
@@ -35,7 +33,7 @@ class PlaylistTest {
     @Test
     @DisplayName("Playlist Should Create Properly And Generate PlaylistCreatedEvent")
     void playlistShouldCreateProperlyAndGenerateEvent() {
-        final Playlist playlist = Playlist.create(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR,  Set.of(EXAMPLE_COLLABORATOR), Set.of(EXAMPLE_TRACK));
+        final Playlist playlist = Playlist.create(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, Set.of(), Set.of(EXAMPLE_TRACK));
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
         assertTrue(playlistEvent.isPresent());
@@ -76,7 +74,8 @@ class PlaylistTest {
     @Test
     @DisplayName("Collaborator Should Not Be Added To Playlist When Already Added")
     void collaboratorShouldNotBeAddedAgain() {
-        final Playlist playlist = Playlist.restore(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, Set.of(EXAMPLE_COLLABORATOR), Set.of());
+        final Set<UserId> collaborators = Set.of(EXAMPLE_COLLABORATOR);
+        final Playlist playlist = Playlist.restore(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, collaborators, Set.of(EXAMPLE_TRACK));
 
         assertTrue(playlist.hasCollaborator(EXAMPLE_COLLABORATOR));
         playlist.addCollaborator(EXAMPLE_COLLABORATOR);
@@ -87,8 +86,9 @@ class PlaylistTest {
 
     @Test
     @DisplayName("Collaborator Should Be Removed From Playlist When Added")
-    void collaboratorShouldBeRemovedTWhenAdded() {
-        final Playlist playlist = Playlist.restore(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, Set.of(EXAMPLE_COLLABORATOR), new HashSet<>());
+    void collaboratorShouldBeRemovedWhenAdded() {
+        final Set<UserId> collaborators = Set.of(EXAMPLE_COLLABORATOR);
+        final Playlist playlist = Playlist.restore(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, collaborators, Set.of(EXAMPLE_TRACK));
 
         assertTrue(playlist.hasCollaborator(EXAMPLE_COLLABORATOR));
         playlist.removeCollaborator(EXAMPLE_COLLABORATOR);
@@ -145,7 +145,7 @@ class PlaylistTest {
 
     @Test
     @DisplayName("Track Should Be Removed From Playlist When Added")
-    void trackShouldBeRemovedTWhenAdded() {
+    void trackShouldBeRemovedWhenAdded() {
         final Playlist playlist = Playlist.restore(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, Set.of(), Set.of(EXAMPLE_TRACK));
 
         assertTrue(playlist.hasTrack(EXAMPLE_TRACK));
