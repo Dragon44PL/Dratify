@@ -1,8 +1,8 @@
-package com.dratify.domain.playlists;
+package com.dratify.domain.playlists.playlist;
 
-import com.dratify.domain.playlists.event.*;
-import com.dratify.domain.playlists.vo.TrackId;
-import com.dratify.domain.playlists.vo.UserId;
+import com.dratify.domain.playlists.playlist.event.*;
+import com.dratify.domain.playlists.playlist.vo.TrackId;
+import com.dratify.domain.playlists.playlist.vo.UserId;
 import domain.AggregateRoot;
 
 import java.util.*;
@@ -45,13 +45,13 @@ class Playlist extends AggregateRoot<UUID, PlaylistEvent> {
         collaborators.add(collaborator);
         final CollaboratorAddedEvent collaboratorAddedEvent = new CollaboratorAddedEvent(id, collaborator);
         this.registerEvent(collaboratorAddedEvent);
-     }
+    }
 
-     void removeCollaborator(UserId collaborator) {
+    void removeCollaborator(UserId collaborator) {
         if(hasCollaborator(collaborator)) {
             processRemovingCollaborator(collaborator);
         }
-     }
+    }
 
     private void processRemovingCollaborator(UserId collaborator) {
         collaborators.remove(collaborator);
