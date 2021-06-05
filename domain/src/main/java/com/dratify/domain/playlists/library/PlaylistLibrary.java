@@ -7,10 +7,8 @@ import com.dratify.domain.playlists.library.event.PlaylistRemovedEvent;
 import com.dratify.domain.playlists.library.vo.PlaylistId;
 import com.dratify.domain.playlists.library.vo.UserId;
 import domain.AggregateRoot;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+
+import java.util.*;
 
 class PlaylistLibrary extends AggregateRoot<UUID, PlaylistLibraryEvent> {
 
@@ -32,7 +30,7 @@ class PlaylistLibrary extends AggregateRoot<UUID, PlaylistLibraryEvent> {
         super(events);
         this.id = id;
         this.user = user;
-        this.playlists = playlists;
+        this.playlists = new HashSet<>(playlists);
     }
 
     void addPlaylist(PlaylistId playlist) {
