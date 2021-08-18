@@ -1,7 +1,7 @@
 package com.dratify.domain.tracks.track;
 
 import com.dratify.domain.tracks.track.event.TrackCreatedEvent;
-import com.dratify.domain.tracks.track.event.TrackDataPathChanged;
+import com.dratify.domain.tracks.track.event.TrackDataPathChangedEvent;
 import com.dratify.domain.tracks.track.event.TrackEvent;
 import com.dratify.domain.tracks.track.event.TrackListenedEvent;
 import com.dratify.domain.tracks.track.vo.ListeningCounter;
@@ -45,8 +45,8 @@ class Track extends AggregateRoot<UUID, TrackEvent> {
     void changeTrackDataPath(TrackDataPath candidate) {
         if(!sameTrackDataPath(candidate)) {
             this.trackDataPath = candidate;
-            final TrackDataPathChanged trackDataPathChanged = new TrackDataPathChanged(id, this.trackDataPath);
-            this.registerEvent(trackDataPathChanged);
+            final TrackDataPathChangedEvent trackDataPathChangedEvent = new TrackDataPathChangedEvent(id, this.trackDataPath);
+            this.registerEvent(trackDataPathChangedEvent);
         }
     }
 
