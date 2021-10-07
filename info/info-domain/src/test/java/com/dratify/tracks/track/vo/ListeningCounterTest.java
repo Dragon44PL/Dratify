@@ -1,4 +1,4 @@
-package com.dratify.domain.tracks.track.vo;
+package com.dratify.tracks.track.vo;
 
 import com.dratify.domain.tracks.track.exception.NegativeCounterException;
 import org.junit.jupiter.api.DisplayName;

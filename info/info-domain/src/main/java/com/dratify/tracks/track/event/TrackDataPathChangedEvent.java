@@ -1,8 +1,6 @@
-package com.dratify.domain.tracks.track.event;
+package com.dratify.tracks.track.event;
 
-import com.dratify.domain.tracks.track.vo.TrackDataPath;
-import java.time.Instant;
-import java.util.UUID;
+import com.dratify.tracks.track.vo.TrackDataPath;
 
 public record TrackDataPathChangedEvent(Instant occurredOn, UUID aggregateId, TrackDataPath trackDataPath) implements TrackEvent {
 

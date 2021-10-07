@@ -1,9 +1,7 @@
-package com.dratify.domain.tracks.track.event;
+package com.dratify.tracks.track.event;
 
-import com.dratify.domain.tracks.track.vo.ListeningCounter;
-import com.dratify.domain.tracks.track.vo.TrackDataPath;
-import java.time.Instant;
-import java.util.UUID;
+import com.dratify.tracks.track.vo.ListeningCounter;
+import com.dratify.tracks.track.vo.TrackDataPath;
 
 public record TrackCreatedEvent(Instant occurredOn, UUID aggregateId, String name, TrackDataPath trackDataPath, ListeningCounter listeningCounter) implements TrackEvent {
 

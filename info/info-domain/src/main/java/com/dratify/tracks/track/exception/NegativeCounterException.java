@@ -1,4 +1,4 @@
-package com.dratify.domain.tracks.track.exception;
+package com.dratify.tracks.track.exception;
 
 public class NegativeCounterException extends RuntimeException {
 
