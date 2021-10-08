@@ -1,4 +1,4 @@
-package com.dratify.domain.tracks.library;
+package com.dratify.tracks.library;
 
 import com.dratify.domain.tracks.library.event.TrackAddedEvent;
 import com.dratify.domain.tracks.library.event.TrackLibraryCreatedEvent;

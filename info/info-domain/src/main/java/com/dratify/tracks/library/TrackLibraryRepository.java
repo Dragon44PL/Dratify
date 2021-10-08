@@ -1,4 +1,4 @@
-package com.dratify.domain.tracks.library;
+package com.dratify.tracks.library;
 
 import domain.DomainRepository;
 import java.util.UUID;
