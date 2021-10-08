@@ -1,4 +1,4 @@
-package com.dratify.domain.playlists.playlist;
+package com.dratify.playlists.playlist;
 
 import domain.DomainRepository;
 import java.util.UUID;

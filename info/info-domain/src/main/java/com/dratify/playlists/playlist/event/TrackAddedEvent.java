@@ -1,6 +1,6 @@
-package com.dratify.domain.playlists.playlist.event;
+package com.dratify.playlists.playlist.event;
 
-import com.dratify.domain.playlists.playlist.vo.TrackId;
+import com.dratify.playlists.playlist.vo.TrackId;
 import java.time.Instant;
 import java.util.UUID;
 

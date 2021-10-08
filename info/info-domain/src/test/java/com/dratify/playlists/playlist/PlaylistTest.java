@@ -1,8 +1,7 @@
-package com.dratify.domain.playlists.playlist;
+package com.dratify.playlists.playlist;
 
-import com.dratify.domain.playlists.playlist.event.*;
-import com.dratify.domain.playlists.playlist.vo.TrackId;
-import com.dratify.domain.playlists.playlist.vo.UserId;
+import com.dratify.playlists.playlist.vo.TrackId;
+import com.dratify.playlists.playlist.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
@@ -36,7 +35,7 @@ class PlaylistTest {
         final Playlist playlist = Playlist.create(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, Set.of(), Set.of(EXAMPLE_TRACK));
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertTrue(playlistEvent.isPresent());
+        Assertions.assertTrue(playlistEvent.isPresent());
         assertEquals(PLAYLIST_CREATED_EVENT, playlistEvent.get().getClass());
 
         final PlaylistCreatedEvent playlistCreatedEvent = (PlaylistCreatedEvent) playlistEvent.get();
@@ -51,7 +50,7 @@ class PlaylistTest {
         final Playlist playlist = Playlist.restore(PLAYLIST_ID, EXAMPLE_NAME, EXAMPLE_AUTHOR, Set.of(), Set.of());
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertFalse(playlistEvent.isPresent());
+        Assertions.assertFalse(playlistEvent.isPresent());
     }
 
     @Test
@@ -63,7 +62,7 @@ class PlaylistTest {
         playlist.addCollaborator(EXAMPLE_COLLABORATOR);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertTrue(playlistEvent.isPresent());
+        Assertions.assertTrue(playlistEvent.isPresent());
         assertEquals(COLLABORATOR_ADDED_EVENT, playlistEvent.get().getClass());
 
         final CollaboratorAddedEvent collaboratorAddedEvent = (CollaboratorAddedEvent) playlistEvent.get();
@@ -81,7 +80,7 @@ class PlaylistTest {
         playlist.addCollaborator(EXAMPLE_COLLABORATOR);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertFalse(playlistEvent.isPresent());
+        Assertions.assertFalse(playlistEvent.isPresent());
     }
 
     @Test
@@ -94,7 +93,7 @@ class PlaylistTest {
         playlist.removeCollaborator(EXAMPLE_COLLABORATOR);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertTrue(playlistEvent.isPresent());
+        Assertions.assertTrue(playlistEvent.isPresent());
         assertEquals(COLLABORATOR_REMOVED_EVENT, playlistEvent.get().getClass());
 
         final CollaboratorRemovedEvent collaboratorRemovedEvent = (CollaboratorRemovedEvent) playlistEvent.get();
@@ -111,7 +110,7 @@ class PlaylistTest {
         playlist.removeCollaborator(EXAMPLE_COLLABORATOR);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertFalse(playlistEvent.isPresent());
+        Assertions.assertFalse(playlistEvent.isPresent());
     }
 
     @Test
@@ -123,7 +122,7 @@ class PlaylistTest {
         playlist.addTrack(EXAMPLE_TRACK);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertTrue(playlistEvent.isPresent());
+        Assertions.assertTrue(playlistEvent.isPresent());
         assertEquals(TRACK_ADDED_EVENT, playlistEvent.get().getClass());
 
         final TrackAddedEvent trackAddedEvent = (TrackAddedEvent) playlistEvent.get();
@@ -140,7 +139,7 @@ class PlaylistTest {
         playlist.addTrack(EXAMPLE_TRACK);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertFalse(playlistEvent.isPresent());
+        Assertions.assertFalse(playlistEvent.isPresent());
     }
 
     @Test
@@ -152,7 +151,7 @@ class PlaylistTest {
         playlist.removeTrack(EXAMPLE_TRACK);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertTrue(playlistEvent.isPresent());
+        Assertions.assertTrue(playlistEvent.isPresent());
         assertEquals(TRACK_REMOVED_EVENT, playlistEvent.get().getClass());
 
         final TrackRemovedEvent trackRemovedEvent = (TrackRemovedEvent) playlistEvent.get();
@@ -169,7 +168,7 @@ class PlaylistTest {
         playlist.removeTrack(EXAMPLE_TRACK);
 
         Optional<PlaylistEvent> playlistEvent = playlist.findLatestEvent();
-        assertFalse(playlistEvent.isPresent());
+        Assertions.assertFalse(playlistEvent.isPresent());
     }
 }
 

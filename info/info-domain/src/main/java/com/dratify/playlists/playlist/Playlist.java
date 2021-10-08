@@ -1,8 +1,8 @@
-package com.dratify.domain.playlists.playlist;
+package com.dratify.playlists.playlist;
 
-import com.dratify.domain.playlists.playlist.event.*;
-import com.dratify.domain.playlists.playlist.vo.TrackId;
-import com.dratify.domain.playlists.playlist.vo.UserId;
+import com.dratify.playlists.playlist.event.*;
+import com.dratify.playlists.playlist.vo.TrackId;
+import com.dratify.playlists.playlist.vo.UserId;
 import domain.AggregateRoot;
 
 import java.util.*;
