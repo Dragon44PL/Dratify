@@ -1,11 +1,11 @@
-package com.dratify.domain.playlists.library;
+package com.dratify.playlists.library;
 
-import com.dratify.domain.playlists.library.event.PlaylistAddedEvent;
-import com.dratify.domain.playlists.library.event.PlaylistLibraryCreatedEvent;
-import com.dratify.domain.playlists.library.event.PlaylistLibraryEvent;
-import com.dratify.domain.playlists.library.event.PlaylistRemovedEvent;
-import com.dratify.domain.playlists.library.vo.PlaylistId;
-import com.dratify.domain.playlists.library.vo.UserId;
+import com.dratify.playlists.library.event.PlaylistAddedEvent;
+import com.dratify.playlists.library.event.PlaylistLibraryCreatedEvent;
+import com.dratify.playlists.library.event.PlaylistLibraryEvent;
+import com.dratify.playlists.library.event.PlaylistRemovedEvent;
+import com.dratify.playlists.library.vo.PlaylistId;
+import com.dratify.playlists.library.vo.UserId;
 import domain.AggregateRoot;
 
 import java.util.*;

@@ -1,11 +1,11 @@
-package com.dratify.domain.playlists.library;
+package com.dratify.playlists.library;
 
-import com.dratify.domain.playlists.library.event.PlaylistAddedEvent;
-import com.dratify.domain.playlists.library.event.PlaylistLibraryCreatedEvent;
-import com.dratify.domain.playlists.library.event.PlaylistLibraryEvent;
-import com.dratify.domain.playlists.library.event.PlaylistRemovedEvent;
-import com.dratify.domain.playlists.library.vo.PlaylistId;
-import com.dratify.domain.playlists.library.vo.UserId;
+import com.dratify.playlists.library.event.PlaylistAddedEvent;
+import com.dratify.playlists.library.event.PlaylistLibraryCreatedEvent;
+import com.dratify.playlists.library.event.PlaylistLibraryEvent;
+import com.dratify.playlists.library.event.PlaylistRemovedEvent;
+import com.dratify.playlists.library.vo.PlaylistId;
+import com.dratify.playlists.library.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
@@ -36,7 +36,7 @@ class PlaylistLibraryTest {
         final PlaylistLibrary playlistLibrary = PlaylistLibrary.create(PLAYLIST_LIBRARY_ID, EXAMPLE_USER, playlists);
 
         Optional<PlaylistLibraryEvent> playlistLibraryEvent = playlistLibrary.findLatestEvent();
-        assertTrue(playlistLibraryEvent.isPresent());
+        Assertions.assertTrue(playlistLibraryEvent.isPresent());
         assertEquals(PLAYLIST_LIBRARY_CREATED_EVENT, playlistLibraryEvent.get().getClass());
 
         final PlaylistLibraryCreatedEvent playlistLibraryCreatedEvent = (PlaylistLibraryCreatedEvent) playlistLibraryEvent.get();
@@ -52,7 +52,7 @@ class PlaylistLibraryTest {
         final PlaylistLibrary playlistLibrary = PlaylistLibrary.restore(PLAYLIST_LIBRARY_ID, EXAMPLE_USER, playlists);
 
         Optional<PlaylistLibraryEvent> playlistEvent = playlistLibrary.findLatestEvent();
-        assertFalse(playlistEvent.isPresent());
+        Assertions.assertFalse(playlistEvent.isPresent());
     }
 
     @Test
@@ -64,7 +64,7 @@ class PlaylistLibraryTest {
         playlistLibrary.addPlaylist(EXAMPLE_PLAYLIST);
 
         Optional<PlaylistLibraryEvent> playlistLibraryEvent = playlistLibrary.findLatestEvent();
-        assertTrue(playlistLibraryEvent.isPresent());
+        Assertions.assertTrue(playlistLibraryEvent.isPresent());
         assertEquals(PLAYLIST_ADDED_EVENT, playlistLibraryEvent.get().getClass());
 
         final PlaylistAddedEvent playlistAddedEvent = (PlaylistAddedEvent) playlistLibraryEvent.get();
@@ -81,7 +81,7 @@ class PlaylistLibraryTest {
         playlistLibrary.addPlaylist(EXAMPLE_PLAYLIST);
 
         Optional<PlaylistLibraryEvent> playlistLibraryEvent = playlistLibrary.findLatestEvent();
-        assertFalse(playlistLibraryEvent.isPresent());
+        Assertions.assertFalse(playlistLibraryEvent.isPresent());
     }
 
     @Test
@@ -93,7 +93,7 @@ class PlaylistLibraryTest {
         playlistLibrary.removePlaylist(EXAMPLE_PLAYLIST);
 
         Optional<PlaylistLibraryEvent> playlistLibraryEvent = playlistLibrary.findLatestEvent();
-        assertTrue(playlistLibraryEvent.isPresent());
+        Assertions.assertTrue(playlistLibraryEvent.isPresent());
         assertEquals(PLAYLIST_REMOVED_EVENT, playlistLibraryEvent.get().getClass());
 
         final PlaylistRemovedEvent playlistRemovedEvent = (PlaylistRemovedEvent) playlistLibraryEvent.get();
@@ -110,6 +110,6 @@ class PlaylistLibraryTest {
         playlistLibrary.removePlaylist(EXAMPLE_PLAYLIST);
 
         Optional<PlaylistLibraryEvent> playlistLibraryEvent = playlistLibrary.findLatestEvent();
-        assertFalse(playlistLibraryEvent.isPresent());
+        Assertions.assertFalse(playlistLibraryEvent.isPresent());
     }
 }

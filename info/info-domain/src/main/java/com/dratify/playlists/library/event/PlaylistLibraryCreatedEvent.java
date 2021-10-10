@@ -1,7 +1,7 @@
-package com.dratify.domain.playlists.library.event;
+package com.dratify.playlists.library.event;
 
-import com.dratify.domain.playlists.library.vo.PlaylistId;
-import com.dratify.domain.playlists.library.vo.UserId;
+import com.dratify.playlists.library.vo.PlaylistId;
+import com.dratify.playlists.library.vo.UserId;
 import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
