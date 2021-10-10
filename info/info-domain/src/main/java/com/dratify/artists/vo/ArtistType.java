@@ -1,4 +1,4 @@
-package com.dratify.domain.artists.vo;
+package com.dratify.artists.vo;
 
 public enum ArtistType {
     ARTIST, BAND

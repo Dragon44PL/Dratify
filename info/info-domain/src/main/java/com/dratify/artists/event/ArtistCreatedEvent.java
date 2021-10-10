@@ -1,8 +1,4 @@
-package com.dratify.domain.artists.event;
-
-import com.dratify.domain.artists.vo.ArtistType;
-import java.time.Instant;
-import java.util.UUID;
+package com.dratify.artists.event;
 
 public record ArtistCreatedEvent(Instant occurredOn, UUID aggregateId, String name, ArtistType artistType) implements ArtistEvent {
 

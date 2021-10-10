@@ -1,9 +1,10 @@
-package com.dratify.domain.artists;
+package com.dratify.artists;
 
+import com.dratify.artists.event.ArtistEvent;
+import com.dratify.artists.vo.ArtistType;
 import com.dratify.domain.artists.event.ArtistCreatedEvent;
-import com.dratify.domain.artists.event.ArtistEvent;
-import com.dratify.domain.artists.vo.ArtistType;
 import domain.AggregateRoot;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

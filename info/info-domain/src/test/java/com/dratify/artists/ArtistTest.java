@@ -1,4 +1,4 @@
-package com.dratify.domain.artists;
+package com.dratify.artists;
 
 import com.dratify.domain.artists.event.ArtistCreatedEvent;
 import com.dratify.domain.artists.event.ArtistEvent;
@@ -29,7 +29,7 @@ class ArtistTest {
         final Artist artist = Artist.create(ARTIST_ID, ARTIST_NAME, ARTIST_TYPE);
 
         Optional<ArtistEvent> artistEvent = artist.findLatestEvent();
-        assertTrue(artistEvent.isPresent());
+        Assertions.assertTrue(artistEvent.isPresent());
         assertEquals(ARTIST_CREATED_EVENT, artistEvent.get().getClass());
 
         final ArtistCreatedEvent artistCreatedEvent = (ArtistCreatedEvent) artistEvent.get();
@@ -44,6 +44,6 @@ class ArtistTest {
         final Artist artist = Artist.restore(ARTIST_ID, ARTIST_NAME, ARTIST_TYPE);
 
         Optional<ArtistEvent> artistEvent = artist.findLatestEvent();
-        assertFalse(artistEvent.isPresent());
+        Assertions.assertFalse(artistEvent.isPresent());
     }
 }
