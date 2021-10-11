@@ -1,11 +1,11 @@
-package com.dratify.domain.albums.library;
+package com.dratify.albums.library;
 
-import com.dratify.domain.albums.library.event.AlbumAddedEvent;
-import com.dratify.domain.albums.library.event.AlbumLibraryCreatedEvent;
-import com.dratify.domain.albums.library.event.AlbumLibraryEvent;
-import com.dratify.domain.albums.library.event.AlbumRemovedEvent;
-import com.dratify.domain.albums.library.vo.AlbumId;
-import com.dratify.domain.albums.library.vo.UserId;
+import com.dratify.albums.library.event.AlbumAddedEvent;
+import com.dratify.albums.library.event.AlbumLibraryCreatedEvent;
+import com.dratify.albums.library.event.AlbumLibraryEvent;
+import com.dratify.albums.library.event.AlbumRemovedEvent;
+import com.dratify.albums.library.vo.AlbumId;
+import com.dratify.albums.library.vo.UserId;
 import domain.AggregateRoot;
 import java.util.*;
 
