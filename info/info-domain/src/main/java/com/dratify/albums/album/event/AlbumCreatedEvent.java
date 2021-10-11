@@ -1,7 +1,7 @@
-package com.dratify.domain.albums.album.event;
+package com.dratify.albums.album.event;
 
-import com.dratify.domain.albums.album.vo.ArtistId;
-import com.dratify.domain.albums.album.vo.TrackId;
+import com.dratify.albums.album.vo.ArtistId;
+import com.dratify.albums.album.vo.TrackId;
 import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;

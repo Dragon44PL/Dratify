@@ -1,8 +1,7 @@
-package com.dratify.domain.albums.album;
+package com.dratify.albums.album;
 
-import com.dratify.domain.albums.album.event.*;
-import com.dratify.domain.albums.album.vo.ArtistId;
-import com.dratify.domain.albums.album.vo.TrackId;
+import com.dratify.albums.album.vo.ArtistId;
+import com.dratify.albums.album.vo.TrackId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
@@ -37,7 +36,7 @@ class AlbumTest {
         final Album album = Album.create(ALBUM_ID, DEFAULT_ALBUM_NAME, DEFAULT_ARTIST, TRACKS);
 
         Optional<AlbumEvent> albumEvent = album.findLatestEvent();
-        assertTrue(albumEvent.isPresent());
+        Assertions.assertTrue(albumEvent.isPresent());
         assertEquals(ALBUM_CREATED_EVENT, albumEvent.get().getClass());
 
         final AlbumCreatedEvent albumCreatedEvent = (AlbumCreatedEvent) albumEvent.get();
@@ -53,7 +52,7 @@ class AlbumTest {
         final Album album = Album.restore(ALBUM_ID, DEFAULT_ALBUM_NAME, DEFAULT_ARTIST, Set.of(DEFAULT_TRACK));
 
         Optional<AlbumEvent> albumEvent = album.findLatestEvent();
-        assertFalse(albumEvent.isPresent());
+        Assertions.assertFalse(albumEvent.isPresent());
     }
 
     @Test
@@ -63,7 +62,7 @@ class AlbumTest {
         album.changeAlbumName(ANOTHER_ALBUM_NAME);
         Optional<AlbumEvent> albumEvent = album.findLatestEvent();
 
-        assertTrue(albumEvent.isPresent());
+        Assertions.assertTrue(albumEvent.isPresent());
         assertEquals(ALBUM_NAME_CHANGE_EVENT, albumEvent.get().getClass());
 
         final AlbumNameChangedEvent albumNameChangedEvent = (AlbumNameChangedEvent) albumEvent.get();
@@ -78,7 +77,7 @@ class AlbumTest {
         album.changeAlbumName(DEFAULT_ALBUM_NAME);
 
         Optional<AlbumEvent> albumEvent = album.findLatestEvent();
-        assertFalse(albumEvent.isPresent());
+        Assertions.assertFalse(albumEvent.isPresent());
     }
 
     @Test
@@ -90,7 +89,7 @@ class AlbumTest {
         album.addTrack(ANOTHER_TRACK);
 
         final Optional<AlbumEvent> albumEvent = album.findLatestEvent();
-        assertTrue(albumEvent.isPresent());
+        Assertions.assertTrue(albumEvent.isPresent());
         assertEquals(TRACK_ADDED_EVENT, albumEvent.get().getClass());
 
         final TrackAddedEvent trackAddedEvent = (TrackAddedEvent) albumEvent.get();
@@ -107,7 +106,7 @@ class AlbumTest {
         album.addTrack(DEFAULT_TRACK);
 
         final Optional<AlbumEvent> albumEvent = album.findLatestEvent();
-        assertFalse(albumEvent.isPresent());
+        Assertions.assertFalse(albumEvent.isPresent());
     }
 
     @Test
@@ -119,7 +118,7 @@ class AlbumTest {
         album.removeTrack(DEFAULT_TRACK);
         final Optional<AlbumEvent> albumEvent = album.findLatestEvent();
 
-        assertTrue(albumEvent.isPresent());
+        Assertions.assertTrue(albumEvent.isPresent());
         assertEquals(TRACK_REMOVED_EVENT, albumEvent.get().getClass());
         final TrackRemovedEvent trackRemovedEvent = (TrackRemovedEvent) albumEvent.get();
         assertEquals(trackRemovedEvent.aggregateId(), ALBUM_ID);
@@ -135,7 +134,7 @@ class AlbumTest {
         album.removeTrack(ANOTHER_TRACK);
 
         final Optional<AlbumEvent> albumEvent = album.findLatestEvent();
-        assertFalse(albumEvent.isPresent());
+        Assertions.assertFalse(albumEvent.isPresent());
     }
 
 }

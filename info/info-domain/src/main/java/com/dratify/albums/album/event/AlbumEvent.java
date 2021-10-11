@@ -1,4 +1,4 @@
-package com.dratify.domain.albums.album.event;
+package com.dratify.albums.album.event;
 
 import domain.events.DomainEvent;
 import java.util.UUID;

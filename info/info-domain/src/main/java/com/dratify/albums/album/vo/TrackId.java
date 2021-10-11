@@ -1,4 +1,4 @@
-package com.dratify.domain.albums.album.vo;
+package com.dratify.albums.album.vo;
 
 import java.util.UUID;
 

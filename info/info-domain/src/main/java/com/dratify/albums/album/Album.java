@@ -1,8 +1,8 @@
-package com.dratify.domain.albums.album;
+package com.dratify.albums.album;
 
-import com.dratify.domain.albums.album.event.*;
-import com.dratify.domain.albums.album.vo.ArtistId;
-import com.dratify.domain.albums.album.vo.TrackId;
+import com.dratify.albums.album.event.*;
+import com.dratify.albums.album.vo.ArtistId;
+import com.dratify.albums.album.vo.TrackId;
 import domain.AggregateRoot;
 
 import java.util.*;
