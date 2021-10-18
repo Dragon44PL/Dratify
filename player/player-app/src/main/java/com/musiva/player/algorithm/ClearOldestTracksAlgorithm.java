@@ -1,6 +1,6 @@
 package com.musiva.player.algorithm;
 
-import com.musiva.player.dto.TrackDataPlaceholder;
+import com.musiva.player.TrackDataPlaceholder;
 
 import java.util.Comparator;
 import java.util.List;
