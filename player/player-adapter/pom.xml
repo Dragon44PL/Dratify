@@ -4,8 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>player</groupId>
-    <artifactId>player-adapter</artifactId>
+    <groupId>com.musiva.player</groupId>
+    <artifactId>adapter</artifactId>
+    <name>player-adapter</name>
     <version>1.0.0</version>
 
     <packaging>pom</packaging>
@@ -14,5 +15,13 @@
         <module>player-adapter-endpoint</module>
         <module>player-adapter-repository</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.musiva.player</groupId>
+            <artifactId>player-app</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
