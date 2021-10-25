@@ -2,6 +2,8 @@ package com.musiva.player.repository;
 
 import com.musiva.player.TrackData;
 
+import java.util.Optional;
+
 public interface TrackDataRepository {
-    TrackData findByFilename(Filename filename);
+    Optional<TrackData> findByFilename(Filename filename);
 }
