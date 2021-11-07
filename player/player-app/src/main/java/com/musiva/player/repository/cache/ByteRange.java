@@ -2,7 +2,8 @@ package com.musiva.player.repository.cache;
 
 public record ByteRange(long begin, long end) {
 
-    long size() {
-        return end - begin;
+    public static ByteRange maximum() {
+        return new ByteRange(0, Long.MAX_VALUE);
     }
+
 }
