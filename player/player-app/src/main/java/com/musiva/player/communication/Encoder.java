@@ -1,9 +1,7 @@
 package com.musiva.player.communication;
 
-import com.musiva.player.TrackData;
-
 import java.util.Optional;
 
-public interface Encoder<T> {
-    Optional<T> encode(TrackData trackData);
+public interface Encoder<S, D> {
+    Optional<D> encode(S s);
 }
