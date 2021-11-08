@@ -5,14 +5,20 @@ import com.musiva.player.repository.Filename;
 
 import java.time.Instant;
 
-public class TrackDataPlaceholder {
+public class TrackDataPlaceholder<T> {
 
     private Instant occurredOn;
     private final Filename filename;
-    private final TrackData trackData;
+    private final T trackData;
 
-    public TrackDataPlaceholder(Filename filename, TrackData trackData) {
+    public TrackDataPlaceholder(Filename filename, T trackData) {
         this.occurredOn = Instant.now();
+        this.filename = filename;
+        this.trackData = trackData;
+    }
+
+    public TrackDataPlaceholder(Instant instant, Filename filename, T trackData) {
+        this.occurredOn = instant;
         this.filename = filename;
         this.trackData = trackData;
     }
@@ -29,7 +35,7 @@ public class TrackDataPlaceholder {
         return filename;
     }
 
-    public TrackData trackData() {
+    public T trackData() {
         return trackData;
     }
 }
