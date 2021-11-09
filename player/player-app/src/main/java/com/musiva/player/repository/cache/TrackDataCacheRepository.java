@@ -5,8 +5,8 @@ import com.musiva.player.TrackData;
 
 import java.util.Optional;
 
-public interface TrackDataCacheRepository {
-    void insertTrackData(Filename filename, TrackData trackData);
+public interface TrackDataCacheRepository<T> {
+    void insertTrackData(Filename filename, T trackData);
     Optional<TrackData> readTrackData(Filename filename, ByteRange range);
     void clearCache();
 }

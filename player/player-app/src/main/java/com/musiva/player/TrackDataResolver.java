@@ -7,12 +7,12 @@ import com.musiva.player.repository.cache.TrackDataCacheRepository;
 
 import java.util.Optional;
 
-public final class TrackDataResolver {
+public final class TrackDataResolver<T> {
 
-    private final TrackDataRepository trackDataRepository;
-    private final TrackDataCacheRepository trackDataCacheRepository;
+    private final TrackDataRepository<T> trackDataRepository;
+    private final TrackDataCacheRepository<T> trackDataCacheRepository;
 
-    public TrackDataResolver(TrackDataRepository trackDataRepository, TrackDataCacheRepository trackDataCacheRepository) {
+    public TrackDataResolver(TrackDataRepository<T> trackDataRepository, TrackDataCacheRepository<T> trackDataCacheRepository) {
         this.trackDataRepository = trackDataRepository;
         this.trackDataCacheRepository = trackDataCacheRepository;
     }
@@ -23,7 +23,7 @@ public final class TrackDataResolver {
     }
 
     private Optional<TrackData> resolveTrackDataFromFileSystem(Filename filename, ByteRange byteRange) {
-        final Optional<TrackData> found = trackDataRepository.findByFilename(filename);
+        final Optional<T> found = trackDataRepository.findByFilename(filename);
         return found.map(data -> {
             trackDataCacheRepository.clearCache();
             trackDataCacheRepository.insertTrackData(filename, data);
