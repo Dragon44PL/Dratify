@@ -1,7 +1,7 @@
-package com.dratify.tracks.track.event;
+package com.musiva.tracks.track.event;
 
-import com.dratify.tracks.track.vo.ListeningCounter;
-import com.dratify.tracks.track.vo.TrackDataPath;
+import com.musiva.tracks.track.vo.ListeningCounter;
+import com.musiva.tracks.track.vo.TrackDataPath;
 
 public record TrackCreatedEvent(Instant occurredOn, UUID aggregateId, String name, TrackDataPath trackDataPath, ListeningCounter listeningCounter) implements TrackEvent {
 

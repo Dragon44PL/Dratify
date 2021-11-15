@@ -1,6 +1,6 @@
-package com.dratify.tracks.track.vo;
+package com.musiva.tracks.track.vo;
 
-import com.dratify.domain.tracks.track.exception.NegativeCounterException;
+import com.musiva.domain.tracks.track.exception.NegativeCounterException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

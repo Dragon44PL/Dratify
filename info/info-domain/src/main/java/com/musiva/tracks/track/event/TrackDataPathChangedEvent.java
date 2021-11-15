@@ -1,6 +1,6 @@
-package com.dratify.tracks.track.event;
+package com.musiva.tracks.track.event;
 
-import com.dratify.tracks.track.vo.TrackDataPath;
+import com.musiva.tracks.track.vo.TrackDataPath;
 
 public record TrackDataPathChangedEvent(Instant occurredOn, UUID aggregateId, TrackDataPath trackDataPath) implements TrackEvent {
 

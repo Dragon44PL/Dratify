@@ -1,4 +1,4 @@
-package com.dratify.tracks.track.vo;
+package com.musiva.tracks.track.vo;
 
 public record ListeningCounter(long count) {
 

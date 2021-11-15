@@ -1,4 +1,4 @@
-package com.dratify.tracks.track.event;
+package com.musiva.tracks.track.event;
 
 import domain.events.DomainEvent;
 import java.util.UUID;
