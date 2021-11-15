@@ -1,12 +1,12 @@
-package com.dratify.tracks.track;
+package com.musiva.tracks.track;
 
-import com.dratify.tracks.Track;
-import com.dratify.tracks.track.event.TrackCreatedEvent;
-import com.dratify.tracks.track.event.TrackDataPathChangedEvent;
-import com.dratify.tracks.track.event.TrackEvent;
-import com.dratify.tracks.track.event.TrackListenedEvent;
-import com.dratify.tracks.track.vo.ListeningCounter;
-import com.dratify.tracks.track.vo.TrackDataPath;
+import com.musiva.tracks.Track;
+import com.musiva.tracks.track.event.TrackCreatedEvent;
+import com.musiva.tracks.track.event.TrackDataPathChangedEvent;
+import com.musiva.tracks.track.event.TrackEvent;
+import com.musiva.tracks.track.event.TrackListenedEvent;
+import com.musiva.tracks.track.vo.ListeningCounter;
+import com.musiva.tracks.track.vo.TrackDataPath;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
