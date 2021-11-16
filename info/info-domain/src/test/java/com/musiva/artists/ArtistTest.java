@@ -1,8 +1,8 @@
-package com.dratify.artists;
+package com.musiva.artists;
 
-import com.dratify.domain.artists.event.ArtistCreatedEvent;
-import com.dratify.domain.artists.event.ArtistEvent;
-import com.dratify.domain.artists.vo.ArtistType;
+import com.musiva.domain.artists.event.ArtistCreatedEvent;
+import com.musiva.domain.artists.event.ArtistEvent;
+import com.musiva.domain.artists.vo.ArtistType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;

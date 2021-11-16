@@ -1,11 +1,11 @@
-package com.dratify.albums.library;
+package com.musiva.albums.library;
 
-import com.dratify.albums.library.event.AlbumAddedEvent;
-import com.dratify.albums.library.event.AlbumLibraryCreatedEvent;
-import com.dratify.albums.library.event.AlbumLibraryEvent;
-import com.dratify.albums.library.event.AlbumRemovedEvent;
-import com.dratify.albums.library.vo.AlbumId;
-import com.dratify.albums.library.vo.UserId;
+import com.musiva.albums.library.event.AlbumAddedEvent;
+import com.musiva.albums.library.event.AlbumLibraryCreatedEvent;
+import com.musiva.albums.library.event.AlbumLibraryEvent;
+import com.musiva.albums.library.event.AlbumRemovedEvent;
+import com.musiva.albums.library.vo.AlbumId;
+import com.musiva.albums.library.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.dratify.app;
+package com.musiva.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

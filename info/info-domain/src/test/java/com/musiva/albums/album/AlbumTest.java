@@ -1,7 +1,7 @@
-package com.dratify.albums.album;
+package com.musiva.albums.album;
 
-import com.dratify.albums.album.vo.ArtistId;
-import com.dratify.albums.album.vo.TrackId;
+import com.musiva.albums.album.vo.ArtistId;
+import com.musiva.albums.album.vo.TrackId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;

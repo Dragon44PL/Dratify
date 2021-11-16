@@ -1,11 +1,11 @@
-package com.dratify.playlists.library;
+package com.musiva.playlists.library;
 
-import com.dratify.playlists.library.event.PlaylistAddedEvent;
-import com.dratify.playlists.library.event.PlaylistLibraryCreatedEvent;
-import com.dratify.playlists.library.event.PlaylistLibraryEvent;
-import com.dratify.playlists.library.event.PlaylistRemovedEvent;
-import com.dratify.playlists.library.vo.PlaylistId;
-import com.dratify.playlists.library.vo.UserId;
+import com.musiva.playlists.library.event.PlaylistAddedEvent;
+import com.musiva.playlists.library.event.PlaylistLibraryCreatedEvent;
+import com.musiva.playlists.library.event.PlaylistLibraryEvent;
+import com.musiva.playlists.library.event.PlaylistRemovedEvent;
+import com.musiva.playlists.library.vo.PlaylistId;
+import com.musiva.playlists.library.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;

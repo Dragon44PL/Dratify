@@ -1,11 +1,11 @@
-package com.dratify.tracks.library;
+package com.musiva.tracks.library;
 
-import com.dratify.domain.tracks.library.event.TrackAddedEvent;
-import com.dratify.domain.tracks.library.event.TrackLibraryCreatedEvent;
-import com.dratify.domain.tracks.library.event.TrackLibraryEvent;
-import com.dratify.domain.tracks.library.event.TrackRemovedEvent;
-import com.dratify.domain.tracks.library.vo.TrackId;
-import com.dratify.domain.tracks.library.vo.UserId;
+import com.musiva.domain.tracks.library.event.TrackAddedEvent;
+import com.musiva.domain.tracks.library.event.TrackLibraryCreatedEvent;
+import com.musiva.domain.tracks.library.event.TrackLibraryEvent;
+import com.musiva.domain.tracks.library.event.TrackRemovedEvent;
+import com.musiva.domain.tracks.library.vo.TrackId;
+import com.musiva.domain.tracks.library.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
