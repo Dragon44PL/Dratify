@@ -31,7 +31,7 @@ public class TrackFacade {
         return created.events();
     }
 
-    public List<TrackEvent> increamentCounter(IncrementCounterCommand incrementCounterCommand) {
+    public List<TrackEvent> incrementCounter(IncrementCounterCommand incrementCounterCommand) {
         final Optional<Track> track = trackRepository.findById(incrementCounterCommand.id());
         return track.map(this::processIncrementingTrack).orElseGet(ArrayList::new);
     }
