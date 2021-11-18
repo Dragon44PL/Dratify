@@ -1,8 +1,8 @@
 package com.musiva.artists;
 
+import com.musiva.artists.event.ArtistCreatedEvent;
 import com.musiva.artists.event.ArtistEvent;
 import com.musiva.artists.vo.ArtistType;
-import com.musiva.domain.artists.event.ArtistCreatedEvent;
 import domain.AggregateRoot;
 
 import java.util.ArrayList;
