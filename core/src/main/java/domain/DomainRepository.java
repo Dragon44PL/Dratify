@@ -1,6 +1,8 @@
 package domain;
 
+import java.util.Optional;
+
 public interface DomainRepository<I, T extends Aggregate> {
-    void deleteById(I id);
-    T save(T t);
+    Optional<T> findById(I id);
+    void save(T t);
 }
