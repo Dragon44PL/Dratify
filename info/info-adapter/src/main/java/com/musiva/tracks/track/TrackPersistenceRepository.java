@@ -27,11 +27,6 @@ public class TrackPersistenceRepository implements TrackRepository {
     }
 
     @Override
-    public void deleteById(UUID id) {
-        jpaTrackRepository.deleteById(id);
-    }
-
-    @Override
     public Optional<Track> findById(UUID id) {
         final Optional<TrackEntity> track = jpaTrackRepository.findById(id);
         return track.map(this::track);
