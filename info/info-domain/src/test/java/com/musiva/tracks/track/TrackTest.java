@@ -1,6 +1,5 @@
 package com.musiva.tracks.track;
 
-import com.musiva.tracks.Track;
 import com.musiva.tracks.track.event.TrackCreatedEvent;
 import com.musiva.tracks.track.event.TrackDataPathChangedEvent;
 import com.musiva.tracks.track.event.TrackEvent;
