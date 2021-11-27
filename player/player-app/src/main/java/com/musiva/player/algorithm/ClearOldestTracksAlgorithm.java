@@ -6,9 +6,11 @@ import java.util.List;
 public class ClearOldestTracksAlgorithm implements TrackDataCacheAlgorithm {
 
     @Override
-    public <T> void clearTrackData(List<TrackDataPlaceholder<T>> trackData, int amount) {
+    public <T> void clearCache(List<TrackDataPlaceholder<T>> trackData, int amount) {
         trackData.sort(Comparator.comparing(TrackDataPlaceholder::occurredOn));
         int amountToDelete = Math.min(amount, trackData.size());
         trackData.subList(0, amountToDelete).clear();
+        System.gc();
     }
 }
+

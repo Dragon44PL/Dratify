@@ -45,7 +45,7 @@ public class TrackDataCacheResolver implements TrackDataCacheRepository<VorbisTr
         final int totalAmount = trackDataCacheProperties.totalTrackAmount();
         if(totalAmount < trackData.size()) {
             final TrackDataCacheAlgorithm algorithm = trackDataCacheProperties.trackDataCacheAlgorithm();
-            algorithm.clearTrackData(trackData, trackData.size() - totalAmount);
+            algorithm.clearCache(trackData, trackData.size() - totalAmount);
         }
     }
 }
