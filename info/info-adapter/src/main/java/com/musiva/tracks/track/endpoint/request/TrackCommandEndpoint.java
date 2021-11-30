@@ -16,11 +16,11 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller("/api/tracks")
-class TrackEndpoint {
+class TrackCommandEndpoint {
 
     private final TrackFacade trackFacade;
 
-    TrackEndpoint(TrackFacade trackFacade) {
+    TrackCommandEndpoint(TrackFacade trackFacade) {
         this.trackFacade = trackFacade;
     }
 
