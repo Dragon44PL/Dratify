@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TrackResponse {
+public class TrackResponseDto {
     private String id;
     private String name;
     private long counter;

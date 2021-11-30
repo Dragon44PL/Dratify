@@ -3,7 +3,7 @@ package com.musiva.tracks.track.endpoint.response;
 import com.musiva.tracks.track.TrackQueryRepository;
 
 import com.musiva.tracks.track.dto.TrackDto;
-import com.musiva.tracks.track.endpoint.response.dto.TrackResponse;
+import com.musiva.tracks.track.endpoint.response.dto.TrackResponseDto;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,13 +25,13 @@ class TrackQueryEndpoint {
     }
 
     @GetMapping
-    List<TrackResponse> findAllTracks() {
+    List<TrackResponseDto> findAllTracks() {
         final List<TrackDto> tracks = trackQueryRepository.findAll();
         return tracks.stream().map(this::createTrackResponse).collect(Collectors.toList());
     }
 
-    private TrackResponse createTrackResponse(TrackDto trackDto) {
-        return new TrackResponse(trackDto.id().toString(), trackDto.name(), trackDto.counter());
+    private TrackResponseDto createTrackResponse(TrackDto trackDto) {
+        return new TrackResponseDto(trackDto.id().toString(), trackDto.name(), trackDto.counter());
     }
 
     @GetMapping("/{id}")
