@@ -7,6 +7,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 interface AlbumRepository extends DomainRepository<UUID, Album> {
-    Optional<Album> findByName(String name);
-    Optional<Album> findByArtist(ArtistId artistId);
+    Optional<Album> findByNameAndArtist(String name, ArtistId artistId);
 }
