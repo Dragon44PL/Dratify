@@ -29,7 +29,7 @@ public class PlaylistFacade {
         return created.events();
     }
 
-    public List<PlaylistEvent> insertCollaborant(InsertCollaborateCommand insertCollaborateCommand) {
+    public List<PlaylistEvent> insertCollaborator(InsertCollaborateCommand insertCollaborateCommand) {
         final Optional<Playlist> playlist = playlistRepository.findById(insertCollaborateCommand.id());
         return playlist.map(value -> processInsertingCollaborate(value, insertCollaborateCommand)).orElseGet(ArrayList::new);
     }
