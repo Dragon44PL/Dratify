@@ -1,10 +1,10 @@
-package com.musiva.playlists.playlist.endpoint.response;
+package com.musiva.playlists.endpoint.response;
 
-import com.musiva.playlists.playlist.PlaylistQueryRepository;
-import com.musiva.playlists.playlist.dto.PlaylistDto;
-import com.musiva.playlists.playlist.endpoint.response.dto.PlaylistResponse;
-import com.musiva.playlists.playlist.vo.TrackId;
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.PlaylistQueryRepository;
+import com.musiva.playlists.dto.PlaylistDto;
+import com.musiva.playlists.endpoint.response.dto.PlaylistResponse;
+import com.musiva.playlists.vo.TrackId;
+import com.musiva.playlists.vo.UserId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

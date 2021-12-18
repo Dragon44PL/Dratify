@@ -1,13 +1,13 @@
-package com.musiva.playlists.playlist.endpoint.request;
+package com.musiva.playlists.endpoint.request;
 
-import com.musiva.playlists.playlist.PlaylistFacade;
-import com.musiva.playlists.playlist.commands.CreatePlaylistCommand;
-import com.musiva.playlists.playlist.commands.InsertCollaborateCommand;
-import com.musiva.playlists.playlist.commands.InsertTrackCommand;
-import com.musiva.playlists.playlist.endpoint.request.dto.CreatePlaylistRequest;
-import com.musiva.playlists.playlist.event.PlaylistEvent;
-import com.musiva.playlists.playlist.vo.TrackId;
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.PlaylistFacade;
+import com.musiva.playlists.commands.InsertCollaborateCommand;
+import com.musiva.playlists.commands.InsertTrackCommand;
+import com.musiva.playlists.endpoint.request.dto.CreatePlaylistRequest;
+import com.musiva.playlists.event.PlaylistEvent;
+import com.musiva.playlists.commands.CreatePlaylistCommand;
+import com.musiva.playlists.vo.TrackId;
+import com.musiva.playlists.vo.UserId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,10 +1,10 @@
-package com.musiva.playlists.playlist.persistence.handler;
+package com.musiva.playlists.persistence.handler;
 
-import com.musiva.playlists.playlist.event.PlaylistCreatedEvent;
-import com.musiva.playlists.playlist.persistence.JpaPlaylistRepository;
-import com.musiva.playlists.playlist.persistence.PlaylistEntity;
-import com.musiva.playlists.playlist.vo.TrackId;
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.persistence.PlaylistEntity;
+import com.musiva.playlists.event.PlaylistCreatedEvent;
+import com.musiva.playlists.persistence.JpaPlaylistRepository;
+import com.musiva.playlists.vo.TrackId;
+import com.musiva.playlists.vo.UserId;
 import domain.events.DomainEventHandler;
 import org.springframework.stereotype.Component;
 

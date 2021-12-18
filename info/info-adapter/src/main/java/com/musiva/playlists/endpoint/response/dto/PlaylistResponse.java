@@ -1,4 +1,4 @@
-package com.musiva.playlists.playlist.endpoint.response.dto;
+package com.musiva.playlists.endpoint.response.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

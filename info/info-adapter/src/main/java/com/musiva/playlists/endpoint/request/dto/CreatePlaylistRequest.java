@@ -1,4 +1,4 @@
-package com.musiva.playlists.playlist.endpoint.request.dto;
+package com.musiva.playlists.endpoint.request.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

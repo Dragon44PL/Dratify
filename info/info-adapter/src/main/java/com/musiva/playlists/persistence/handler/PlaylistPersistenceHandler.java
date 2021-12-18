@@ -1,9 +1,9 @@
-package com.musiva.playlists.playlist.persistence.handler;
+package com.musiva.playlists.persistence.handler;
 
-import com.musiva.playlists.playlist.event.CollaboratorAddedEvent;
-import com.musiva.playlists.playlist.event.PlaylistCreatedEvent;
-import com.musiva.playlists.playlist.event.PlaylistEvent;
-import com.musiva.playlists.playlist.event.TrackAddedEvent;
+import com.musiva.playlists.event.CollaboratorAddedEvent;
+import com.musiva.playlists.event.PlaylistCreatedEvent;
+import com.musiva.playlists.event.PlaylistEvent;
+import com.musiva.playlists.event.TrackAddedEvent;
 import domain.events.DomainEventHandler;
 import org.springframework.stereotype.Component;
 
