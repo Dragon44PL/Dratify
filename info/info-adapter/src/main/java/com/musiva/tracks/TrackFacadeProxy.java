@@ -1,8 +1,8 @@
-package com.musiva.tracks.track;
+package com.musiva.tracks;
 
-import com.musiva.tracks.track.commands.CreateTrackCommand;
-import com.musiva.tracks.track.commands.IncrementCounterCommand;
-import com.musiva.tracks.track.event.TrackEvent;
+import com.musiva.tracks.commands.IncrementCounterCommand;
+import com.musiva.tracks.event.TrackEvent;
+import com.musiva.tracks.commands.CreateTrackCommand;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

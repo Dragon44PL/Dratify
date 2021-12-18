@@ -1,12 +1,12 @@
-package com.musiva.tracks.track.endpoint.request;
+package com.musiva.tracks.endpoint.request;
 
-import com.musiva.tracks.track.TrackFacade;
-import com.musiva.tracks.track.commands.CreateTrackCommand;
-import com.musiva.tracks.track.commands.IncrementCounterCommand;
-import com.musiva.tracks.track.endpoint.request.dto.CreateTrackDataPathRequest;
-import com.musiva.tracks.track.endpoint.request.dto.CreateTrackRequest;
-import com.musiva.tracks.track.event.TrackEvent;
-import com.musiva.tracks.track.vo.TrackDataPath;
+import com.musiva.tracks.TrackFacade;
+import com.musiva.tracks.commands.CreateTrackCommand;
+import com.musiva.tracks.commands.IncrementCounterCommand;
+import com.musiva.tracks.endpoint.request.dto.CreateTrackRequest;
+import com.musiva.tracks.event.TrackEvent;
+import com.musiva.tracks.endpoint.request.dto.CreateTrackDataPathRequest;
+import com.musiva.tracks.vo.TrackDataPath;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

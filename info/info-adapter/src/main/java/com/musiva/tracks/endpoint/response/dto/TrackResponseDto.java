@@ -1,4 +1,4 @@
-package com.musiva.tracks.track.endpoint.request.dto;
+package com.musiva.tracks.endpoint.response.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,9 +7,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class CreateTrackRequest {
+@AllArgsConstructor
+public class TrackResponseDto {
+    private String id;
     private String name;
-    private CreateTrackDataPathRequest trackDataPath;
+    private long counter;
 }
