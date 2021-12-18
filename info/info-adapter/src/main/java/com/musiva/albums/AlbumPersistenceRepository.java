@@ -1,10 +1,10 @@
-package com.musiva.albums.album;
+package com.musiva.albums;
 
-import com.musiva.albums.album.persistence.AlbumEntity;
-import com.musiva.albums.album.persistence.JpaAlbumRepository;
-import com.musiva.albums.album.persistence.handler.AlbumPersistenceHandler;
-import com.musiva.albums.album.vo.ArtistId;
-import com.musiva.albums.album.vo.TrackId;
+import com.musiva.albums.persistence.AlbumEntity;
+import com.musiva.albums.persistence.JpaAlbumRepository;
+import com.musiva.albums.persistence.handler.AlbumPersistenceHandler;
+import com.musiva.albums.vo.ArtistId;
+import com.musiva.albums.vo.TrackId;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;

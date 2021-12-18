@@ -1,9 +1,9 @@
-package com.musiva.albums.album.endpoint.response;
+package com.musiva.albums.endpoint.response;
 
-import com.musiva.albums.album.AlbumQueryRepository;
-import com.musiva.albums.album.dto.AlbumDto;
-import com.musiva.albums.album.endpoint.response.dto.AlbumResponseDto;
-import com.musiva.albums.album.vo.TrackId;
+import com.musiva.albums.AlbumQueryRepository;
+import com.musiva.albums.dto.AlbumDto;
+import com.musiva.albums.endpoint.response.dto.AlbumResponseDto;
+import com.musiva.albums.vo.TrackId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
