@@ -1,5 +1,7 @@
 package com.musiva.tracks.track.vo;
 
+import com.musiva.tracks.track.exception.NegativeCounterException;
+
 public record ListeningCounter(long count) {
 
     private static final int MIN_COUNT = 0;
