@@ -28,7 +28,7 @@ public class TrackLibraryFacade {
     }
 
     public List<TrackLibraryEvent> insertTrack(InsertTrackCommand insertTrackCommand) {
-        Optional<TrackLibrary> library = trackLibraryRepository.findById(insertTrackCommand.id());
+        Optional<TrackLibrary> library = trackLibraryRepository.findByUserId(insertTrackCommand.userId());
         return library.map(trackLibrary -> processInsertingTrack(trackLibrary, insertTrackCommand)).orElseGet(ArrayList::new);
     }
 

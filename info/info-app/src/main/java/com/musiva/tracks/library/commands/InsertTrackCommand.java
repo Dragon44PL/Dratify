@@ -1,7 +1,6 @@
 package com.musiva.tracks.library.commands;
 
 import com.musiva.tracks.library.vo.TrackId;
+import com.musiva.tracks.library.vo.UserId;
 
-import java.util.UUID;
-
-public record InsertTrackCommand(UUID id, TrackId trackId) {}
+public record InsertTrackCommand(UserId userId, TrackId trackId) {}
