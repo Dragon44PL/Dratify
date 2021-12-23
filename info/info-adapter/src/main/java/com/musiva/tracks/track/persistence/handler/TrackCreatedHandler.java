@@ -1,10 +1,10 @@
-package com.musiva.tracks.persistence.handler;
+package com.musiva.tracks.track.persistence.handler;
 
-import com.musiva.tracks.event.TrackCreatedEvent;
-import com.musiva.tracks.persistence.TrackDataEntity;
-import com.musiva.tracks.persistence.JpaTrackRepository;
-import com.musiva.tracks.persistence.TrackCounterEntity;
-import com.musiva.tracks.persistence.TrackEntity;
+import com.musiva.tracks.track.event.TrackCreatedEvent;
+import com.musiva.tracks.track.persistence.TrackDataEntity;
+import com.musiva.tracks.track.persistence.JpaTrackRepository;
+import com.musiva.tracks.track.persistence.TrackCounterEntity;
+import com.musiva.tracks.track.persistence.TrackEntity;
 import domain.events.DomainEventHandler;
 
 public class TrackCreatedHandler implements DomainEventHandler<TrackCreatedEvent> {

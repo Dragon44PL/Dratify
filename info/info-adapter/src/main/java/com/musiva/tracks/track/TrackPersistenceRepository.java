@@ -1,11 +1,11 @@
-package com.musiva.tracks;
+package com.musiva.tracks.track;
 
-import com.musiva.tracks.persistence.TrackDataEntity;
-import com.musiva.tracks.persistence.JpaTrackRepository;
-import com.musiva.tracks.persistence.TrackEntity;
-import com.musiva.tracks.persistence.handler.TrackPersistenceHandler;
-import com.musiva.tracks.vo.ListeningCounter;
-import com.musiva.tracks.vo.TrackDataPath;
+import com.musiva.tracks.track.persistence.TrackDataEntity;
+import com.musiva.tracks.track.persistence.JpaTrackRepository;
+import com.musiva.tracks.track.persistence.TrackEntity;
+import com.musiva.tracks.track.persistence.handler.TrackPersistenceHandler;
+import com.musiva.tracks.track.vo.ListeningCounter;
+import com.musiva.tracks.track.vo.TrackDataPath;
 
 import java.util.Optional;
 import java.util.UUID;

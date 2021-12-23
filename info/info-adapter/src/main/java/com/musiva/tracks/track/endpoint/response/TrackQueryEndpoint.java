@@ -1,8 +1,8 @@
-package com.musiva.tracks.endpoint.response;
+package com.musiva.tracks.track.endpoint.response;
 
-import com.musiva.tracks.TrackQueryRepository;
-import com.musiva.tracks.dto.TrackDto;
-import com.musiva.tracks.endpoint.response.dto.TrackResponseDto;
+import com.musiva.tracks.track.TrackQueryRepository;
+import com.musiva.tracks.track.dto.TrackDto;
+import com.musiva.tracks.track.endpoint.response.dto.TrackResponseDto;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

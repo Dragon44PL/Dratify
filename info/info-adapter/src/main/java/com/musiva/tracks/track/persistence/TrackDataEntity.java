@@ -1,4 +1,4 @@
-package com.musiva.tracks.persistence;
+package com.musiva.tracks.track.persistence;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

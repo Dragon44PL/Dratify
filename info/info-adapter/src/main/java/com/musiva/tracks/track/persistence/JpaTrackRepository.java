@@ -1,4 +1,4 @@
-package com.musiva.tracks.persistence;
+package com.musiva.tracks.track.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

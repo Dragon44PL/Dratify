@@ -1,4 +1,4 @@
-package com.musiva.tracks.endpoint.request.dto;
+package com.musiva.tracks.track.endpoint.request.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
