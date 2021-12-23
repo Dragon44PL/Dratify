@@ -1,4 +1,4 @@
-package com.musiva.playlists.playlist.event;
+package com.musiva.playlists.event;
 
 import domain.events.DomainEvent;
 import java.util.UUID;

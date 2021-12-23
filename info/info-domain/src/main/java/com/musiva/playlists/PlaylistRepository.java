@@ -1,4 +1,4 @@
-package com.musiva.playlists.playlist;
+package com.musiva.playlists;
 
 import domain.DomainRepository;
 

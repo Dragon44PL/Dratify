@@ -1,6 +1,7 @@
-package com.musiva.playlists.playlist.event;
+package com.musiva.playlists.event;
 
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.vo.UserId;
+
 import java.time.Instant;
 import java.util.UUID;
 
