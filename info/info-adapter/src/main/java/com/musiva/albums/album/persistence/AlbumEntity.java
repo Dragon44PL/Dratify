@@ -1,4 +1,4 @@
-package com.musiva.albums.persistence;
+package com.musiva.albums.album.persistence;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

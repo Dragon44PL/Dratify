@@ -1,8 +1,8 @@
-package com.musiva.albums.persistence.handler;
+package com.musiva.albums.album.persistence.handler;
 
-import com.musiva.albums.event.AlbumNameChangedEvent;
-import com.musiva.albums.persistence.AlbumEntity;
-import com.musiva.albums.persistence.JpaAlbumRepository;
+import com.musiva.albums.album.event.AlbumNameChangedEvent;
+import com.musiva.albums.album.persistence.AlbumEntity;
+import com.musiva.albums.album.persistence.JpaAlbumRepository;
 
 import domain.events.DomainEventHandler;
 import org.springframework.stereotype.Component;

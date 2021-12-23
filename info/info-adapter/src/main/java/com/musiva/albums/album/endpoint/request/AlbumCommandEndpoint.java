@@ -1,13 +1,13 @@
-package com.musiva.albums.endpoint.request;
+package com.musiva.albums.album.endpoint.request;
 
-import com.musiva.albums.AlbumFacade;
-import com.musiva.albums.commands.CreateAlbumCommand;
-import com.musiva.albums.commands.InsertTrackCommand;
-import com.musiva.albums.endpoint.request.dto.CreateAlbumRequest;
-import com.musiva.albums.endpoint.request.dto.InsertTrackToAlbumRequest;
-import com.musiva.albums.event.AlbumEvent;
-import com.musiva.albums.vo.ArtistId;
-import com.musiva.albums.vo.TrackId;
+import com.musiva.albums.album.AlbumFacade;
+import com.musiva.albums.album.commands.CreateAlbumCommand;
+import com.musiva.albums.album.commands.InsertTrackCommand;
+import com.musiva.albums.album.endpoint.request.dto.CreateAlbumRequest;
+import com.musiva.albums.album.endpoint.request.dto.InsertTrackToAlbumRequest;
+import com.musiva.albums.album.event.AlbumEvent;
+import com.musiva.albums.album.vo.ArtistId;
+import com.musiva.albums.album.vo.TrackId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

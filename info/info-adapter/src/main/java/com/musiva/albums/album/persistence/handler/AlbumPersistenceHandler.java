@@ -1,7 +1,6 @@
-package com.musiva.albums.persistence.handler;
+package com.musiva.albums.album.persistence.handler;
 
 import com.musiva.albums.album.event.*;
-import com.musiva.albums.event.*;
 import domain.events.DomainEventHandler;
 import org.springframework.stereotype.Component;
 

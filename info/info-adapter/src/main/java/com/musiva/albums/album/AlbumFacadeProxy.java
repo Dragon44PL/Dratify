@@ -1,8 +1,10 @@
-package com.musiva.albums;
+package com.musiva.albums.album;
 
-import com.musiva.albums.commands.CreateAlbumCommand;
-import com.musiva.albums.commands.InsertTrackCommand;
-import com.musiva.albums.event.AlbumEvent;
+import com.musiva.albums.album.AlbumFacade;
+import com.musiva.albums.album.AlbumRepository;
+import com.musiva.albums.album.commands.CreateAlbumCommand;
+import com.musiva.albums.album.commands.InsertTrackCommand;
+import com.musiva.albums.album.event.AlbumEvent;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

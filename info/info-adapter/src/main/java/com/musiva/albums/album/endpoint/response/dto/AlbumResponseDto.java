@@ -1,4 +1,4 @@
-package com.musiva.albums.endpoint.response.dto;
+package com.musiva.albums.album.endpoint.response.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
