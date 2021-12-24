@@ -1,6 +1,6 @@
-package com.musiva.playlists.playlist.commands;
+package com.musiva.playlists.commands;
 
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.vo.UserId;
 
 import java.util.UUID;
 

@@ -1,10 +1,10 @@
-package com.musiva.playlists.playlist;
+package com.musiva.playlists;
 
-import com.musiva.playlists.playlist.commands.CreatePlaylistCommand;
-import com.musiva.playlists.playlist.commands.InsertCollaborateCommand;
-import com.musiva.playlists.playlist.commands.InsertTrackCommand;
-import com.musiva.playlists.playlist.event.PlaylistEvent;
-import com.musiva.playlists.playlist.exception.PlaylistAlreadyDefinedException;
+import com.musiva.playlists.commands.InsertCollaborateCommand;
+import com.musiva.playlists.commands.InsertTrackCommand;
+import com.musiva.playlists.exception.PlaylistAlreadyDefinedException;
+import com.musiva.playlists.commands.CreatePlaylistCommand;
+import com.musiva.playlists.event.PlaylistEvent;
 
 import java.util.*;
 

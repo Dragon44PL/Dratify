@@ -1,4 +1,4 @@
-package com.musiva.playlists.playlist.exception;
+package com.musiva.playlists.exception;
 
 public class PlaylistAlreadyDefinedException extends RuntimeException {
 

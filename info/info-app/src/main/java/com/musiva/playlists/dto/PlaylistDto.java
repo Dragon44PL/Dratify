@@ -1,7 +1,7 @@
-package com.musiva.playlists.playlist.dto;
+package com.musiva.playlists.dto;
 
-import com.musiva.playlists.playlist.vo.TrackId;
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.vo.TrackId;
+import com.musiva.playlists.vo.UserId;
 
 import java.util.Set;
 import java.util.UUID;

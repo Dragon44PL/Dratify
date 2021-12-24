@@ -1,6 +1,6 @@
-package com.musiva.playlists.playlist;
+package com.musiva.playlists;
 
-import com.musiva.playlists.playlist.dto.PlaylistDto;
+import com.musiva.playlists.dto.PlaylistDto;
 
 import java.util.List;
 import java.util.Optional;
