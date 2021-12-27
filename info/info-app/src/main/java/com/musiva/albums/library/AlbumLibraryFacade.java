@@ -30,7 +30,7 @@ public class AlbumLibraryFacade {
     }
 
     public List<AlbumLibraryEvent> insertAlbumLibrary(InsertAlbumCommand insertAlbumCommand) {
-        final Optional<AlbumLibrary> albumLibrary = albumLibraryRepository.findById(insertAlbumCommand.id());
+        final Optional<AlbumLibrary> albumLibrary = albumLibraryRepository.findByUser(insertAlbumCommand.userId());
         return albumLibrary.map(library -> processInsertingAlbum(library, insertAlbumCommand)).orElseGet(ArrayList::new);
     }
 
