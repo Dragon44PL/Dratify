@@ -1,7 +1,7 @@
-package com.musiva.playlists.playlist;
+package com.musiva.playlists;
 
-import com.musiva.playlists.playlist.vo.TrackId;
-import com.musiva.playlists.playlist.vo.UserId;
+import com.musiva.playlists.vo.TrackId;
+import com.musiva.playlists.vo.UserId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
