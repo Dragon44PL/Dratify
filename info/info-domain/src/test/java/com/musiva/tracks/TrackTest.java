@@ -1,11 +1,13 @@
-package com.musiva.tracks.track;
+package com.musiva.tracks;
 
+import com.musiva.tracks.track.Track;
 import com.musiva.tracks.track.event.TrackCreatedEvent;
 import com.musiva.tracks.track.event.TrackDataPathChangedEvent;
 import com.musiva.tracks.track.event.TrackEvent;
 import com.musiva.tracks.track.event.TrackListenedEvent;
 import com.musiva.tracks.track.vo.ListeningCounter;
 import com.musiva.tracks.track.vo.TrackDataPath;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
@@ -41,7 +43,7 @@ class TrackTest {
         assertEquals(TRACK_ID, trackCreatedEvent.aggregateId());
         assertEquals(TRACK_NAME, trackCreatedEvent.name());
         assertEquals(TRACK_DATA_PATH, trackCreatedEvent.trackDataPath());
-        assertEquals(0, trackCreatedEvent.listeningCounter().count());
+        Assertions.assertEquals(0, trackCreatedEvent.listeningCounter().count());
     }
 
     @Test
@@ -65,7 +67,7 @@ class TrackTest {
 
         final TrackListenedEvent trackListenedEvent = (TrackListenedEvent) trackEvent.get();
         assertEquals(TRACK_ID, trackListenedEvent.aggregateId());
-        assertEquals(1, trackListenedEvent.listeningCounter().count());
+        Assertions.assertEquals(1, trackListenedEvent.listeningCounter().count());
     }
 
     @Test

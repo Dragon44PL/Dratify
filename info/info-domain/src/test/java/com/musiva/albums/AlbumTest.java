@@ -1,5 +1,6 @@
-package com.musiva.albums.album;
+package com.musiva.albums;
 
+import com.musiva.albums.album.Album;
 import com.musiva.albums.album.vo.ArtistId;
 import com.musiva.albums.album.vo.TrackId;
 import org.junit.jupiter.api.DisplayName;
