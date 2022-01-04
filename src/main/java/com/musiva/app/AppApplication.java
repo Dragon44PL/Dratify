@@ -1,4 +1,4 @@
-package com.dratify.app;
+package com.musiva.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
