@@ -8,6 +8,7 @@
         <groupId>com.musiva.player</groupId>
         <artifactId>adapter</artifactId>
         <version>1.0.0</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.dratify.player.adapter</groupId>
@@ -17,6 +18,24 @@
     <properties>
         <java.version>16</java.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.musiva.player.adapter</groupId>
+            <artifactId>repository</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

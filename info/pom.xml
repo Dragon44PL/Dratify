@@ -4,9 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dratify</groupId>
+    <groupId>com.musiva</groupId>
     <artifactId>info</artifactId>
     <version>1.0.0</version>
+
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>16</java.version>
@@ -21,7 +23,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.dratify</groupId>
+            <groupId>org.musiva</groupId>
             <artifactId>core</artifactId>
             <version>1.0.0</version>
         </dependency>
